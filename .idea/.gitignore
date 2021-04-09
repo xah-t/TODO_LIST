@@ -2,7 +2,7 @@
 /shelf/
 /workspace.xml
 # Datasource local storage ignored files
-/../../../../:\Python\TODO_LIST_TASK\.idea/dataSources/
+/../../../../../:\python\PY-WEB\TODO_LIST\.idea/dataSources/
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
