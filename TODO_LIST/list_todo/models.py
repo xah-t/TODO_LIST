@@ -24,6 +24,7 @@ class Note(models.Model):
 
         return f'{self.message} . Status: {self.get_note_status_display()}'
 
+
 class nlist(models.Model):
     # это должно быть в сериалайзере
     """Лист с заметками"""
