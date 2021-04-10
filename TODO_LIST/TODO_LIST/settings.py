@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
 
     # мои приложения
-    'list_todo',
+    'list_todo.apps.ListTodoConfig',
 ]
 
 MIDDLEWARE = [

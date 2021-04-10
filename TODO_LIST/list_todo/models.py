@@ -1,5 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
+from datetime import datetime, timedelta
+
 
 # Create your models here.
 
@@ -14,7 +16,7 @@ class Note(models.Model):
 
     title = models.CharField(default="", max_length=255)
     message = models.TextField(default="", blank=True)
-    date_add = models.DateTimeField(auto_now_add=True)
+    date_add = models.DateTimeField(default=datetime.now()+timedelta(days=1), blank=True)
     public = models.BooleanField(default=False)
     author = models.ForeignKey(User, related_name='authors', on_delete=models.PROTECT, blank=True)
     note_status = models.IntegerField(default=0, choices=STATUSES, verbose_name='Статус дела')
