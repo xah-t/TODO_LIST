@@ -5,7 +5,7 @@ from django.db import models
 
 
 class Note(models.Model):
-    """Заметки  со статусом"""
+    """Заметки со статусом"""
     STATUSES = (
         (0, "Активно"),
         (1, "Ожидание"),
@@ -23,4 +23,24 @@ class Note(models.Model):
     def __str__(self):
 
         return f'{self.message} . Status: {self.get_note_status_display()}'
+
+class nlist(models.Model):
+    # это должно быть в сериалайзере
+    """Лист с заметками"""
+
+    def add_note(self):
+        # это должно быть в сериалайзере
+        """добавленине заметки"""
+        pass
+
+    def del_note(self):
+        # это должно быть в сериалайзере
+        """удаление заметки"""
+        pass
+
+    def edit_note(self):
+        # это должно быть в сериалайзере
+        """изменение заметки"""
+        pass
+
 
