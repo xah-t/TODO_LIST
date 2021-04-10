@@ -20,7 +20,6 @@ class NotesSerializer(serializers.ModelSerializer):
         fields = ('id', 'title', 'message', 'date_add', 'author', )
 
 
-
 class NoteEditorSerializer(serializers.ModelSerializer):
     """Добавление и изменение заметки"""
     author = AuthorSerializer(read_only=True)
