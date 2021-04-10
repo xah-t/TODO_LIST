@@ -22,7 +22,7 @@ class Note(models.Model):
 
     def __str__(self):
 
-        return f'{self.message} . Status: {self.get_note_status_display()}'
+        return f'{self.message}.\nStatus: {self.get_note_status_display()}'
 
 
 class nlist(models.Model):

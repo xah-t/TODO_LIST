@@ -15,7 +15,7 @@ def index(request):
     return HttpResponse("Hello, world. You're at the list_todo index.")
 
 
-class NoteView(APIView):
+class NotesView(APIView):
     """Заметки в листе"""
 
     def get(self, request):
