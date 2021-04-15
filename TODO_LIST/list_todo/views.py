@@ -20,7 +20,15 @@ class NotesView(APIView):
 
     def get(self, request):
         """получить заметки листа"""
-        notes = Note.objects.filter(public=True).order_by('-date_add', 'title')
+        notes = Note.objects.filter(public=True).order_by('-date_add', 'title')  # заменить вывод всех объектов на фильтр filter(public=True).order_by('-date_add', 'title')
+        notes_serializer = NotesSerializer(notes, many=True)
+        return Response(notes_serializer.data)
 
-        serializer = NotesSerializer(notes, many=True)
-        return Response(serializer.data)
+    def post(self, request):
+        """добавить заметку в лист"""
+        notes_serializer = NotesSerializer(data=request.data)
+        if notes_serializer.is_valid():
+            notes_serializer.save()
+            return Response(notes_serializer.data, STATUS=status.HTTP_201_CREATED)
+        return Response(notes_serializer.errors, STATUS=status.HTTP_400_BAD_REQUEST)
+

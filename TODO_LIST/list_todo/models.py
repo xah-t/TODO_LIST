@@ -14,8 +14,8 @@ class Note(models.Model):
         (2, "Выполнено"),
     )
 
-    title = models.CharField(default="", max_length=255)
-    message = models.TextField(default="", blank=True)
+    title = models.CharField(default='', max_length=255)
+    message = models.TextField(default='', blank=True)
     date_add = models.DateTimeField(default=datetime.now()+timedelta(days=1), blank=True)
     public = models.BooleanField(default=False)
     author = models.ForeignKey(User, related_name='authors', on_delete=models.PROTECT, blank=True)

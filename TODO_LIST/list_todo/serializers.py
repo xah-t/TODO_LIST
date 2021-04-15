@@ -3,6 +3,8 @@ from rest_framework import serializers
 from .models import Note
 
 
+
+
 class AuthorSerializer(serializers.ModelSerializer):
     """Автор статьи"""
 
