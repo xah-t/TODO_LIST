@@ -27,23 +27,18 @@ class Note(models.Model):
         return f'{self.message}.\nStatus: {self.get_note_status_display()}'
 
 
-class nlist(models.Model):
-    # это должно быть в сериалайзере
-    """Лист с заметками"""
-
-    def add_note(self):
-        # это должно быть в сериалайзере
-        """добавленине заметки"""
-        pass
-
-    def del_note(self):
-        # это должно быть в сериалайзере
-        """удаление заметки"""
-        pass
-
-    def edit_note(self):
-        # это должно быть в сериалайзере
-        """изменение заметки"""
-        pass
+# class nlist(models.Model):
+#     # это должно быть в сериалайзере
+#     """Лист с заметками"""
+#
+#     def del_note(self):
+#         # это должно быть в сериалайзере
+#         """удаление заметки"""
+#         pass
+#
+#     def edit_note(self):
+#         # это должно быть в сериалайзере
+#         """изменение заметки"""
+#         pass
 
 
